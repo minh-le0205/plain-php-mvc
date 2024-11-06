@@ -1,7 +1,6 @@
 <?php
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-// require "src/router.php";
 spl_autoload_register(function ($className) {
   require "src/" . str_replace('\\', '/', $className) . ".php";
 });
